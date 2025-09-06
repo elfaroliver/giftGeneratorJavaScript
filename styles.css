@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+
+/* Center everything horizontally and vertically */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  margin: 0;
+  background-color:#dd39e2;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h6 {
+  font-size: 8px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  padding-bottom: 10px;
+}
+
+.giftButton {
+  font-size: 16px;
+  background-color: #57df18f1;
+  border-radius: 12px;
+  border: 1px transparent solid;
+  padding: 13px 30px;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+a {
+  font-size: 25px;
+  background-color: #00FFF0;
+  border-radius: 50px;
+  border: 1px transparent solid; /* transparent border */
+  color: black;
+  padding: 13px 30px; /* remove 2px as we are now using the border */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  opacity: 0.6;
+  cursor: pointer;
+}
