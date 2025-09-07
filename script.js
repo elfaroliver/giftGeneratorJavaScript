@@ -22,7 +22,6 @@ let totalGames = 0;
 //let expGameCount = 0;
 
 let cheapGameGiven = false;
-//let gameOver = false;
 
 giftButton.addEventListener("click", () => {
   //const randomIndex = Math.floor(Math.random() * arrayOfGifts.length && arrayOfCheapGames.length);
@@ -44,14 +43,12 @@ giftButton.addEventListener("click", () => {
 
   if (arrayOfGifts.includes(selectedGift)) {
     alert(`You got a spicier and pricier game: ${selectedGift}! Lucky you — and that’s the end.`);
-    gameOver = true;
     giftButton.disabled = true;
     totalGames = 2; // Ensure no more games can be drawn
     return;
   } else if (arrayOfCheapGames.includes(selectedGift)) {
     if (cheapGameGiven) {
       alert(`You got another cheap game: ${selectedGift}. That’s all you get!`);
-      //gameOver = true;
       giftButton.disabled = true;
     } else {
       cheapGameGiven = true;
@@ -99,7 +96,6 @@ giftButton.addEventListener("click", () => {
   /*if (arrayOfCheapGames.includes(selectedGift)) {
     if (cheapGameGiven) {
       alert(`You got another cheap game: ${selectedGift}. That’s all you get!`);
-      gameOver = true;
       giftButton.disabled = true;
     } else {
       cheapGameGiven = true;
@@ -108,7 +104,6 @@ giftButton.addEventListener("click", () => {
     }
   } else {
     alert(`You got a spicier and pricier game: ${selectedGift}! Lucky you — and that’s the end.`);
-    gameOver = true;
     giftButton.disabled = true;
     return;
   }*/
