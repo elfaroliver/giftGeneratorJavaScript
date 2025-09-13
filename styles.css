@@ -1,15 +1,26 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('./fonts/Roboto-Regular.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url('./fonts/Roboto-Light.ttf') format('woff2');
+}*/
+
 html {
   box-sizing: border-box;
 }
-
-/* Center everything horizontally and vertically */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body {
   min-height: 100vh;
   display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  background-color:#dd39e2;
+  background-color:hsl(298, 74%, 55%);
   flex-direction: column;
 }
 
@@ -32,28 +43,57 @@ h6 {
   padding-bottom: 10px;
 }
 
-.giftButton {
-  font-size: 16px;
-  background-color: #57df18f1;
-  border-radius: 12px;
+#giftButton {
+  font-size: 250px;
+  background-color: #4ddd0af1;
+  border-radius: 25px;
   border: 1px transparent solid;
   padding: 13px 30px;
   text-align: center;
   display: inline-block;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 a {
   font-size: 25px;
   background-color: #00FFF0;
   border-radius: 50px;
-  border: 1px transparent solid; /* transparent border */
+  border: 1px transparent solid;
   color: black;
-  padding: 13px 30px; /* remove 2px as we are now using the border */
+  padding: 13px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
   opacity: 0.6;
   cursor: pointer;
+}
+
+.giftDisplay {
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+#gameResult {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+#gameResult.show {
+  opacity: 1;
+}
+.hidden {
+  display: none;
 }

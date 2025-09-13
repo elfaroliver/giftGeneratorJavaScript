@@ -39,12 +39,34 @@ giftButton.addEventListener("click", () => {
   const randomIndex = Math.floor(Math.random() * allItems.length);
   const selectedGift = allItems[randomIndex];
 
+  const cheapGift = Math.floor(Math.random() * arrayOfCheapGames.length);
+  const expensiveGift = Math.floor(Math.random() * arrayOfGifts.length);
+
   totalGames++;
 
-  if (arrayOfGifts.includes(selectedGift)) {
-    alert(`You got a spicier and pricier game: ${selectedGift}! Lucky you — and that’s the end.`);
-    giftButton.disabled = true;
-    totalGames = 2; // Ensure no more games can be drawn
+  const randomExp = arrayOfGifts[Math.floor(Math.random() * arrayOfGifts.length)];
+  const randomCheap = arrayOfCheapGames[Math.floor(Math.random() * arrayOfCheapGames.length)];
+
+  //alert(`You got a spicier and pricier game: ${randomExp}`);
+  //alert(`You also got a cheaper game: ${randomCheap}`);
+  totalGames = 2; // Ensure no more games can be drawn
+
+  const gameResult = document.getElementById("gameResult");
+  gameResult.innerHTML = `
+        Gotcha! You get two games!<br><br>
+    🎮 You got a spicypricy game: <b>${randomExp}</b><br>
+    💸 And a cheap game: <b>${randomCheap}</b>
+  `;
+
+  gameResult.classList.remove("hidden");
+  setTimeout(() => gameResult.classList.add("show"), 5);
+
+  giftButton.disabled = true; // lock after 2 games
+
+  /*if (arrayOfGifts.includes(selectedGift)) {
+    alert(`You got a spicier and pricier game: ${selectedGift}! Lucky you! That’s the end of it.`);
+    //giftButton.disabled = true;
+    //totalGames = 2; // Ensure no more games can be drawn
     return;
   } else if (arrayOfCheapGames.includes(selectedGift)) {
     if (cheapGameGiven) {
@@ -54,7 +76,15 @@ giftButton.addEventListener("click", () => {
       cheapGameGiven = true;
       alert(`You got a cheap game: ${selectedGift}! You may try again for something better.`);
     }
+  }*/
+
+
+  /*if (arrayOfGifts.includes(selectedGift)) {
+    alert(`You got a spicier and pricier game: ${selectedGift}! Lucky you! You'll get another.`);
+  } else if (arrayOfCheapGames.includes(selectedGift)) {
+    alert(`You got a cheap game: ${selectedGift}! Have another go!`);
   }
+  giftButton.disabled = totalGames >= 2; // Disable if 2 games have been drawn*/
 });
 
 //alert(`You will receive: ${selectedGift}`);
