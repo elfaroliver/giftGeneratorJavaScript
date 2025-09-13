@@ -35,6 +35,8 @@ giftButton.addEventListener("click", () => {
     alert(`Happy birthday! Have fun playing ${selectedGift}!`);
   }*/
 
+  document.querySelector("h2").classList.add("hidden");
+
   const allItems = [...arrayOfGifts, ...arrayOfCheapGames];
   const randomIndex = Math.floor(Math.random() * allItems.length);
   const selectedGift = allItems[randomIndex];
@@ -55,7 +57,8 @@ giftButton.addEventListener("click", () => {
   gameResult.innerHTML = `
         Gotcha! You get two games!<br><br>
     🎮 You got a spicypricy game: <b>${randomExp}</b><br>
-    💸 And a cheap game: <b>${randomCheap}</b>
+    💸 And a cheap game: <b>${randomCheap}</b> <br><br>
+    ️    Happy birthday! Enjoy your games! 🎉
   `;
 
   gameResult.classList.remove("hidden");

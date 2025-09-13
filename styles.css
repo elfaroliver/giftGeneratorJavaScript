@@ -6,6 +6,11 @@
 @font-face {
   font-family: Roboto-Light;
   src: url('./fonts/Roboto-Light.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: Monsieur La Doulaise;
+  src: url('./fonts/MonsieurLaDoulaise-Regular.ttf') format('woff2');
 }*/
 
 html {
@@ -25,30 +30,30 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 100px;
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 15px;
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
 
 h6 {
-  font-size: 8px;
+  font-family: Monsieur La Doulaise;
+  font-size: 40px;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  padding-bottom: 10px;
+  padding-top: 25px;
 }
 
 #giftButton {
-  font-size: 250px;
+  font-size: 25px;
   background-color: #4ddd0af1;
   border-radius: 25px;
   border: 1px transparent solid;
-  padding: 13px 30px;
   text-align: center;
   display: inline-block;
   opacity: 1;
@@ -79,7 +84,7 @@ a {
 
 #gameResult {
   position: fixed;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
   background: white;
