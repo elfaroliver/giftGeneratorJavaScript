@@ -7,10 +7,10 @@
  * 
  */
 
-const arrayOfCheapGames = ["Sir Whoopass", "Terraria", "Granny: Escape Together", "Twelve Minutes", "Backrooms: Escape Together", 
+const arrayOfCheapGames = ["Sir Whoopass", "Terraria", "Twelve Minutes", "Backrooms: Escape Together", 
   "Vampires Dawn 3", "Fears to Fathom: Woodbury Getaway", "Undertale", "Fears to Fathom: Ironbark Lookout"]; // 9.99 or less
   
-const arrayOfGifts = ["Grunn", "Death and Taxes", "Mouthwashing", "MiSide", "Chrono Trigger", "Wanted Raccoon", "Stray", "Cozy Caravan", 
+const arrayOfGifts = ["Grunn", "Death and Taxes", "Mouthwashing", "MiSide", "Wanted Raccoon", "Stray", "Cozy Caravan", 
   "Layers of Fear(2016)", "Inside", "Tactical Breach Wizards", "Dead by Daylight", "Superliminal", "Dragon Ball Z: Kakarot", "Dead Space 3", 
   "Kindergarten 3", "Resident Evil", "Darq: Complete Edition", "Into the Dead: Our Darkest Days", "Hades", "Layers of Fear", 
   "Date Everything", "Visage",];
